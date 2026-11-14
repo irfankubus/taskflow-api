@@ -39,6 +39,34 @@ Bir yazılım şirketi, ekip üyelerinin sorumluluklarını tek bir yerden takip
 | assignee | string | Atanan çalışan |
 | createdAt, updatedAt | tarih | Otomatik |
 
+## API Tasarımı (Endpoint Listesi)
+
+| Method | Endpoint | Açıklama | Başarılı kod | Hata kodları |
+|---|---|---|---|---|
+| GET | `/tasks` | Tüm görevleri listeler | 200 | – |
+| GET | `/tasks/:id` | Belirli bir görevi getirir | 200 | 404 |
+| POST | `/tasks` | Yeni görev oluşturur | 201 | 400 |
+| PUT | `/tasks/:id` | Görev bilgilerini günceller | 200 | 400, 404 |
+| DELETE | `/tasks/:id` | Görevi siler | 200 | 404 |
+
+**Örnek istek (POST /tasks):** `{"title": "Deneme", "priority": "high"}`
+**Örnek cevap (201):** `{"id": 3, "title": "Deneme", "description": "", "status": "pending", "priority": "high", "assignee": null, ...}`
+
+## Proje Yapısı
+
+```
+taskflow-api/
+├── package.json
+├── README.md
+├── docs/            (dokümanlar ve Postman ekran görüntüleri)
+└── src/
+    ├── app.js                       (sunucu ve middleware kurulumu)
+    ├── routes/taskRoutes.js         (yönlendirme)
+    ├── controllers/taskController.js (iş mantığı)
+    ├── middleware/logger.js         (istek kaydı)
+    └── data/tasks.json              (JSON veri dosyası)
+```
+
 ## Sonuç
 
 Proje, görev yönetimi için temel CRUD işlemlerini, katmanlı bir kod yapısını ve bir logger middleware'ini içeren çalışan bir REST API sunar. Kurulum ve çalıştırma adımları `README.md` dosyasındadır; testler Postman üzerinden yapılmıştır.

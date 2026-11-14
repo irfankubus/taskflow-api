@@ -12,7 +12,7 @@ Node.js ve Express ile geliştirilmiş, görevlerin oluşturulması, listelenmes
 
 ```bash
 # 1. Projeyi indirin
-git clone <REPO-LINKI>
+git clone https://github.com/irfankubus/taskflow-api.git
 cd taskflow-api
 
 # 2. Bağımlılıkları kurun
@@ -23,6 +23,10 @@ npm start
 ```
 
 Sunucu varsayılan olarak `http://localhost:3000` adresinde çalışır. Farklı port için `PORT` ortam değişkenini kullanabilirsiniz.
+
+> **Windows PowerShell notu:** "running scripts is disabled on this system" hatası alırsanız `npm start` yerine `npm.cmd start` komutunu kullanın.
+
+Sunucu çalıştığında tarayıcıdan `http://localhost:3000/tasks` adresini açarak görevleri JSON olarak görebilirsiniz.
 
 ## Proje Yapısı
 

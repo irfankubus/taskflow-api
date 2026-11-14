@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Proje tanıtım dokümanını hazırla",
+    "description": "1-2 sayfalık proje tanıtım dokümanı yazılacak.",
+    "status": "pending",
+    "priority": "medium",
+    "assignee": "musa",
+    "createdAt": "2026-11-14T09:00:00.000Z",
+    "updatedAt": "2026-11-14T09:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "title": "Postman testlerini yap",
+    "description": "CRUD endpointleri Postman üzerinden test edilecek.",
+    "status": "in-progress",
+    "priority": "high",
+    "assignee": "ayse",
+    "createdAt": "2026-11-14T09:30:00.000Z",
+    "updatedAt": "2026-11-14T09:30:00.000Z"
+  }
+]
